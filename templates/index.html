@@ -1,0 +1,69 @@
+```html id="f8zj5i"
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Smart AI Text Summarizer</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Smart AI Text Summarizer</h1>
+
+    <form method="POST">
+
+        <div class="input-container">
+
+            <textarea
+                name="text"
+                placeholder="Enter any paragraph or article..."
+                required
+            >{{ original_text }}</textarea>
+
+            <button type="submit">
+                Summarize
+            </button>
+
+        </div>
+
+    </form>
+
+    {% if summarized_text %}
+
+    <div class="output-box">
+
+        <h2>Summarized Text</h2>
+
+        <p>{{ summarized_text }}</p>
+
+        <div class="stats">
+
+            <h3>Fuzzy Similarity</h3>
+            <p>{{ fuzzy_score }}%</p>
+
+            <h3>Cosine Similarity</h3>
+            <p>{{ cosine_score }}%</p>
+
+            <h3>Final Accuracy</h3>
+            <p>{{ final_score }}%</p>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
+```

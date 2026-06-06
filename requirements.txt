@@ -1,0 +1,9 @@
+```txt id="5dml8c"
+flask
+nltk
+spacy
+numpy
+scikit-learn
+fuzzywuzzy
+python-Levenshtein
+```
